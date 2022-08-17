@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요</title>
+    <style>
+        /* css3 1. select 2.꾸미기*/
+        /* #id로 가져오기 */
+        #t1{ 
+            /* 스타일부여 : 속성명: 속성값; */
+            background-color: black;
+            color: white;
+        }
+
+        #t2{
+            color: red;
+        }
+
+        #t3{
+            color: blue;
+        }
+
+
+        h3{
+            color: green;
+        }
+
+        
+
+        /* .area 로 해야 적용 됨! */
+        .area{
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            /* 따로도 가능 */
+            --border-width: 3px;
+            --border-style: solid;
+            --border-color: blue;
+            /* 한 번에도 가능 */
+            --border: 3px solid blanchedalmond
+
+            --border-top-width: 3px;
+            --border-top-style: solid;
+            --border-top-color: black;
+
+            --border-top: 3px solid black;
+
+            border-width : 3px;
+            border-style : solid;
+
+            --border-top-color : red;
+            --border-bottom-color : gray;
+            --border-left-color : green;
+            --border-right-color : wheat;
+
+            border-color: green aqua  red violet;
+
+            /* margin: 0 auto; */
+
+            /* 클래스 요소로 가져오기 */
+
+            
+        }
+
+        /* 코드 위치도 중요함 : div 위에 위치해 있을 땐 적용 안 됐음!!  */
+        .abc{
+            background-color: lightblue;
+        }
+
+        /* 클래스보다 id를 가지고 지정하는 것이 더 높은 우선순위를 가짐 */
+        #d5{
+            background-color: lightpink;
+        }
+
+        .zzz{
+            background-color: blue;
+        }
+
+        .box{
+            width: 300px; height: 300px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        
+        .red{ background-color: red; }
+        .blue{background-color: blue;}
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="t1">개요</h1>
+
+    <h2 id="t2">글씨222222</h2>
+
+    <h3 id="t3">글3333333</h3>
+
+    <h3 id="t4">사과의 효능</h3>
+
+<br><br><br>
+<hr><hr><hr>
+<br><br><br>
+
+<!-- div.area#d${$번째div}*5 -->
+    <div class="area abc" id="d1">1번째div</div>
+    <div class="area abc" id="d2">2번째div</div>
+    <div class="area abc" id="d3">3번째div</div>
+    <div class="area zzz" id="d4">4번째div</div>
+    <div class="area zzz" id="d5">5번째div</div>
+
+    <br><br><br>
+
+    <div class="box red">새로만든DIV</div>
+    <div class="box blue">새로만든DIV</div>
+</body>
+</html>
