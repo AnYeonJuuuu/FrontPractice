@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+
+#ff1{
+    font-family: '궁서체';
+}
+
+#ff2{
+    font-family: '굴림체';
+}
+
+#ff3{
+    font-family: 'Noto Sans KR', sans-serif, '궁서체';
+}
+
+/* font-size 테스트 */
+#size1{
+    font-size: 50px;
+}
+
+#size2{
+    font-size: 2em;
+}
+
+#size3{
+    font-size: 300%;
+}
+
+/* font-weight 테스트 */
+#fw1{
+    font-weight: bold; /*굵게*/
+    font-size: 2em;
+}
+
+#fw2{
+    font-weight: lighter;/*현재보다 얇게*/
+    font-size: 2em;
+}
+
+
+#fw3{
+    font-weight: 900;
+    font-size: 2em;
+}
+
+/* font-style 테스트 */
+/* 
+    italic : 원래 글씨를 기울여서 보여줌
+    oblique : 기울인 글씨로 다시 씀
+*/
+#fs1{
+    font-style: italic;
+    font-size: 3em;
+}
+
+#fs2{
+    font-style: oblique;
+    font-size: 3em;
+}
+
+/* color 테스트 */
+#c-name{
+    color: blue;
+}
+#c-16{
+    color: #ff6262;
+}
+
+#c-rgb{
+    color: rgb(250, 100, 233)
+}
+
+/* 알파 : 투명도 값 지정 가능 */
+#c-rgba{
+    color: rgba(250, 100, 233, 0.3);
+}
+
+/* text-decoration */
+#td1{
+    text-decoration: underline;
+}
+
+#td2{
+    text-decoration: line-through;
+}
+
+#td3{
+    text-decoration: overline;
+}
+
+#td4 a{
+    text-decoration: none;
+}
+
+/* text-transform */
+#tt1{
+    text-transform: none;
+}
+
+#tt2{
+    text-transform: capitalize;
+}
+#tt3{
+    text-transform: uppercase;
+}
+#tt4{
+    text-transform: lowercase;
+}
+
+/* text-shadow : 글자에 그림자 넣어줌 */
+#bg{
+    background-color: black;
+    margin: 30px;
+    padding: 50px;
+
+}
+
+#ts{
+    font-size: 100px;
+    font-weight: 900;
+
+    /* 가로 세로 번짐정도 색상 */
+    text-shadow: 0px 0px 40px #ccc,
+                0px -5px 4px #ff3,
+                2px -10px 6px #fd3,
+                -2px -15px 11px #f80,
+                -2px 15px 40px rgb(108, 34, 255),
+                2px -19px 18px #f20;
+
+}
+
+/* letter-spacing */
+#ls{
+    letter-spacing: 5px;
+}
+
+/* word-spacing */
+#ws{
+    word-spacing: 30px;
+}
+
+/* test-align */
+/* justify : 양쪽정렬 */
+#ta1{
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+}
+
+/* text-indent */
+#ti{
+    text-indent: 30px;
+}
+
+#lh{
+    line-height: 50px;
+}
+
+/* text-overflow */
+.over-class{
+    background-color: lightgray;
+    width: 300px;
+
+}
+
+#to{
+    white-space: nowrap;
+    /* hiddon, scroll, .. (4가지) */
+    overflow: hidden;
+    /* clip = 그냥 잘라버림 , ellipsis = ...으로 보임*/
+    text-overflow: ellipsis;
+}

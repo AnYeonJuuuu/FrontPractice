@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃스타일</title>
+    <link rel="stylesheet" href="./05_레이아웃스타일.css">
+</head>
+<body>
+    <h1>레이아웃 스타일</h1>
+
+    <hr>
+
+    <h2>기본 스타일</h2>
+
+    <h3>width, height</h3>
+
+    <h4>고정크기</h4>
+    <div id="fixed-size" class="size-test"></div>
+    
+    <h4>가변크기</h4>
+    <div id="t" class="size-test">
+    <div id="variable-size" class="size-test"></div>
+    </div>
+    <hr>
+
+    <h3>화면 배치 방법 변경</h3>
+    <!-- 3가지 타입 -->
+    
+    <!-- 블록  => 인라인  -->
+    <p>display : inline</p>
+    <!-- div.display.display-inline.area$*5 -->
+    <div class="display display-inline area1">얖</div>
+    <div class="display display-inline area2">얖</div>
+    <div class="display display-inline area3">얖</div>
+    <div class="display display-inline area4">얖</div>
+    <div class="display display-inline area5">얖</div>
+
+    <!-- 블록  => 인라인블록  -->
+    <p>display : inline-block</p>
+    <!-- div.display.display-inline.area$*5 -->
+    <div class="display display-inline-block area1">얖</div>
+    <div class="display display-inline-block area2">얖</div>
+    <div class="display display-inline-block area3">얖</div>
+    <div class="display display-inline-block area4">얖</div>
+    <div class="display display-inline-block area5">얖</div>
+
+    <!-- 인라인  => 블록  -->
+    <p>display : block</p>
+    <!-- span.display.display-block.area${$번째 span태그}*5 -->
+    <span class="display display-block area1">1번째 span태그</span>
+    <span class="display display-block area2">2번째 span태그</span>
+    <span class="display display-block area3">3번째 span태그</span>
+    <span class="display display-block area4">4번째 span태그</span>
+    <span class="display display-block area5">5번째 span태그</span>
+  
+
+    <hr>
+
+    <h2>테두리 스타일</h2>
+    
+    <!-- div.border#border-test$*10 -->
+    <div class="border" id="border-test1"></div>
+    <div class="border" id="border-test2"></div>
+    <div class="border" id="border-test3"></div>
+    <div class="border" id="border-test4"></div>
+    <div class="border" id="border-test5"></div>
+    <div class="border" id="border-test6"></div>
+    <div class="border" id="border-test7"></div>
+    <div class="border" id="border-test8"></div>
+    <div class="border" id="border-test9"></div>
+    <div class="border" id="border-test10"></div>
+
+    <hr>
+
+    <h2>여백 스타일</h2>
+
+    <div class="space">기준</div>
+
+    <h3>padding</h3>
+    <!-- 테두리와 컨텐츠 영역 사이의 거리 -->
+    <div class="space" id="padding1">전체</div>
+
+    <br>
+
+    <div class="space" id="padding2">부분</div>
+
+    <br><br><br>
+
+    <h3>margin</h3>
+
+    <!-- 다른 요소 간 간격 조절 -->
+    <div class="space" id="margin1">전체</div>
+    <div class="space" id="margin2">부분</div>
+
+    <hr>
+
+    <h2>포지셔닝</h2>
+    <!-- css를 이용해서 여러 요소를 적절하게 배치 -->
+
+    <h3>절대위치와 상대위치</h3>
+    <div class="outer">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+
+<hr>
+
+    <h3>고정위치</h3>
+    <div id="fixed-area"></div>
+
+    <hr>
+
+    <h3>visibility</h3>
+    <div class="visibility" id="v-test1"></div>
+    <div class="visibility" id="v-test2"></div>
+    <div class="visibility" id="v-test3"></div>
+
+    <hr>
+    <h3>z-index</h3>
+
+        <div id="z-wrap">
+            <div class="z-test" id="z1"></div>
+            <div class="z-test" id="z2"></div>
+            <div class="z-test" id="z3"></div>
+        </div>
+
+    <hr>
+
+    <h3>float, clear</h3>
+
+    <!-- .float-test{$$$}*5 -->
+    <div class="float-test">001</div>
+    <div class="float-test">002</div>
+    <div class="float-test">003</div>
+    <div class="float-test">004</div>
+    <div class="float-test">005</div>
+
+    <!-- 아래 코드 이용하지 말고, 가상 선택자(after) 이용할 것! -->
+   
+
+    <hr>
+    
+    <br clear="both">
+
+    <hr> <hr> <hr> <hr> <hr> <hr> <hr> <hr> <hr> <hr> <hr>
+
+    <h2>표 스타일</h2>
+
+    <!-- 테이블에 스타일 적용 -->
+    <table>
+
+        <caption>성적표</caption>
+        <!-- (tr>td*2)*3 -->
+        <tr>
+            <td>구분</td>
+            <td>점수</td>
+        </tr>
+        <tr>
+            <td>수학</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>영어</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</td>
+        </tr>
+
+
+    </table>
+    
+ 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
