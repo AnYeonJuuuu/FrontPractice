@@ -1,0 +1,51 @@
+body{
+    /* background-image: url(../resource/imgs/꽃배경.jpg); */
+    background-repeat: no-repeat;
+    background-size: scale-down;
+    background-color: honeydew;
+    background-blend-mode: multiply;
+    
+}
+
+div{
+    text-align: center;
+    
+    font-family: 'Gowun Dodum', sans-serif;
+
+    font-weight: 300px;
+
+    text-shadow: -1px 0 rgb(0, 62, 14), 0 2.5px rgb(0, 62, 14), 2px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+
+    color: rgb(253, 253, 253);
+
+    border-color: #0b003e;
+    
+    font-size: 100px;
+
+    position: static;
+
+    /* border-style  : double;
+    
+    box-sizing: content-box; */
+
+}
+
+#cat{
+    position: absolute;
+    left: 100px;
+    top: 1000px;
+}
+
+/* div{
+    font-size: 100px;
+    border-radius: 10%;
+} */
+
+#like{
+    text-align: center;
+    color: black;
+    position: absolute;
+    left: 50%;
+    --right: 50%;
+
+}
