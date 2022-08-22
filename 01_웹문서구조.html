@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹문서구조</title>
+    <link rel="stylesheet" href="./01_웹문서구조.css">
+</head>
+<body>
+    <h1>웹 문서 구조 (영역 관련)</h1>
+
+    <hr>
+
+    <h2>영역 관련 속성</h2>
+    <div class="test">안녕하세요</div>
+
+    <hr>
+
+    <h2>div 안에 div 넣기</h2>
+    <!-- .test>.inner -->
+    <div class="test">
+        <div class="inner"></div>
+    </div>
+
+    <h2>div 안에 div 여러 개 넣기</h2>
+
+    <h3>상/하</h3>
+    <div class="wrap">
+        <div class="test1"></div>
+        <div class="test2"></div>
+    </div>
+
+    <h3>좌/우</h3>
+    <div class="wrap">
+        <!-- 
+            css에서
+            display: == div와 div 사이의 줄바꿈 때문에 
+            50%50% 했을 때 엔터키 때문에 좌우로 붙어서 잘 안 나왔음!
+
+            float:left == div 엔터키와 관련 없이 잘 나옴!
+          -->
+        <div class="test3"></div>
+        <div class="test4"></div>
+    </div>
+
+
+<br><br><br><br><br><br><br>
+</body>
+</html>

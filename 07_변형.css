@@ -1,0 +1,117 @@
+.trans-test{
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+}
+
+/* 2차원 변형 */
+
+/* translate */
+#trans1:hover{
+    /* 마우스 올리면 이동 */
+    --transform: translateX(-100px);
+    --transform: translateY(-100px);
+    transform: translate(100px,100px);
+
+}
+
+/* scale */
+#trans2:hover{
+    transform: scaleX(2) scaleY(3);
+    transform: scaleY(2);
+    transform: scale(2);
+}
+
+/* rotate */
+#trans3:hover{
+    transform: rotate(-30deg);
+}
+
+/* skew */
+#trans4:hover{
+    transform: skewX(-40deg);
+    transform: skewY(-40deg);
+    transform: skewX(40deg) scaleY(50deg);
+}
+
+/* 3차원 변형 */
+
+/* translate */
+#trans3-1:hover{
+    /* perspective로 원근감을 줌. */
+    transform: perspective(300px) translateZ(200px);
+    transform: perspective(300px) translate3d(50px, 50px, 200px);
+}
+
+/* rotate */
+#trans3-2:hover{
+    transform: perspective(300px) rotateX();
+    transform: perspective(100px) rotate3d(0,0,5,50deg);
+
+}
+
+/* 기타 */
+/* transform-origin */
+.my-pic{
+    border: 3px dashed green;
+    width: 300px;
+    height: 300px;
+}
+
+.to-wrap{
+    display: inline-block;
+}
+
+#left-top:hover{
+    transform-origin: left top;
+    transform: rotate(20deg);
+}
+
+#left-bottom:hover{
+    transform-origin: left bottom;
+    transform: rotate(20deg);
+}
+
+#right-top:hover{
+    transform-origin: right top;
+    transform: rotate(20deg);
+}
+
+#right-bottom:hover{
+    /* transform-origin == 변형하는 기준점 */
+    transform-origin: right bottom;
+    transform: rotate(20deg);
+}
+
+/* backFace-visibility */
+#b1:hover{
+    transform: rotateY(180deg);
+    backface-visibility: visible;/*기본값*/
+}
+
+#b2:hover{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+/* perspective-origin */
+.box{
+    border: 1px dashed black;
+    padding: 50px;
+}
+
+#outer{
+    perspective: 300px;
+    perspective-origin: center; /*기본값*/
+    perspective-origin: center;
+}
+
+#inner{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
+
+#inner:hover{
+    transform: rotateX(30deg);
+}
