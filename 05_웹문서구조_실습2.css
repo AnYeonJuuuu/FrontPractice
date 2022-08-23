@@ -1,0 +1,67 @@
+body *:not(h1){
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.wrap{
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+}
+
+.t1{
+    height: 20%;
+}
+
+.t2{
+    height: 5%;
+}
+
+.t3{
+    height: 55%;
+}
+
+.t4{
+    height: 20%;
+}
+
+#i1{
+    height: 100%;
+    width: 10%;
+    float: left;
+}
+
+#i2{
+    height: 100%;
+    width: 60%;
+    float: left;
+
+}
+
+#i3{
+    height: 100%;
+    width: 30%;
+    float: left;
+
+}
+
+#a1{
+    height: 100%;
+    width: 20%;
+    float: left;
+
+}
+
+#a2{
+    height: 100%;
+    width: 40%;
+    float: left;
+
+}
+
+#a3{
+    height: 100%;
+    width: 40%;
+    float: left;
+
+}
