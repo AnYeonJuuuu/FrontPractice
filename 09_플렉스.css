@@ -1,0 +1,95 @@
+div{
+    border:  1px solid black;
+    box-sizing: border-box;
+}
+
+body{
+    height: 800px;
+}
+
+.outer{
+    /* 부모요소가 width 요소는 이미 세팅 되어 있지만 height는 따로 지정 해주어야 %로 크기 변경 가능!*/
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 1px dashed red;
+
+    /* flex */
+    display: flex; /*자식 요소들이 inline 처럼 바뀜!*/
+    flex-direction: row; /* row[-reverse] (기본값), column(: 세로축 방향을 기준으로)[-reverse]*/
+
+    justify-content: space-between;
+    /* 
+        <justify-content> : 메인축을 기준으로 정렬 (contents(= item 묶어놓은 것)를 정렬)
+        flex-start(기본값)
+        flex-end
+        center
+
+        space-between : 아이템 사이의 공간을 똑같이 만들어 주는 것
+        space-evenly
+        space-around : 아이템 기준으로 아이템 주위 공간을 동일한 사이즈 만큼 가지게 함(margin과 비슷한 개념)
+    */
+
+    align-items: center;
+    /* 
+        <align-items> : "교차축" 을 기준으로 정렬
+        flex-start(기본값)
+        flex-end
+        center
+    */
+
+    flex-wrap: wrap;
+    /* 
+        - item들의 사이즈가 contaimer를 넘어갈 때, 어떻게 처리할지
+    */
+
+    align-content: space-evenly;
+    /* 
+        - flex-wrap 속성 == wrap 일 때,
+        꼬챙이 사이의 간격 조정.
+        // 아이템들의 가로폭의 합이 콘테이너의 가로폭을 넘어가는 경우
+        다음 줄로 내려간 컨텐츠 영역에 대해,
+        여러 줄로 되어버린 아이템들의 정렬을 어떻게 할지 정하는 속성.
+
+        stretch(기본값)
+        flex-start
+        flex-end
+        center
+
+        space-between : 아이템 사이의 공간을 똑같이 만들어 주는 것
+        space-evenly : 사이사이 모든 간격이 일정하게 만들어 줌.
+        space-around : 아이템 기준으로 아이템 주위 공간을 동일한 사이즈 만큼 가지게 함(margin과 비슷한 개념)
+    */
+
+}
+
+.inner{
+    width: 100px;
+    height: 100px;
+}
+
+#t3{
+    background-color: skyblue;
+    /* align-self 이용하려면 flex-wrap 무효화 후 이용 하기!! */
+    align-self: auto;
+
+    /* 
+        auto (기본값) : align-items 의 영향을 받음
+        stretch : align-
+        flex-start
+        flex-end
+        center
+    */
+
+    order: -3;
+    /* 
+        order 
+        기본값 == 0
+        숫자가 작을수록 앞에 배치 (음수 가능)
+    */
+}
+
+#t7{
+    order: -1;
+    background-color: green;
+}
