@@ -1,0 +1,238 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    background-color: honeydew;
+}
+
+/* body{css 제외 선택자
+    --background-color: rgb(69, 39, 129);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+} */
+
+
+
+div, input{
+    border: 0.5px solid rgba(15, 65, 0, 0.3);
+    box-sizing: border-box;
+
+}
+
+.wrap{
+    width: 1200px;
+    height: 1000px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: honeydew;
+    
+}
+
+header{/**/
+    height: 25%;
+    border: none;
+}
+
+#contents{
+    height: 80%;
+}
+
+#menu{
+    height: 20%;
+}
+
+#main1{/**/
+    height:35%
+}
+
+#main2{height: 30%;}
+
+footer{/**/
+    height: 10%;
+}
+
+#lp{
+    width: 90px;
+    height: 80px;
+    margin-top: 20px;
+    margin: 0px;
+    padding: 0px;
+
+    animation-name: jjjin;
+    animation-duration: 1.9s;
+    animation-timing-function: cubic-bezier(0,0.15,0,75,1);
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    /* animation-play-state: paused == 애니메니션 일시정지 */
+}
+
+@keyframes jjjin{
+    /* 시작, 종료지점은 꼭 들어가야 함. */
+    from{
+    
+        width: 60px;
+        height: 50px;
+    }
+    to{
+        
+        width: 40px;
+        height: 30px;
+        
+
+    }
+    /* 100%{
+        
+        width: 50px;
+        height: 50px;
+    } */
+}
+
+
+
+
+#music{
+    height: 100%;
+    width: 100%;
+    --float: left;
+    margin: auto;
+    height: 100%;
+    font-size: 100px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: -2px 0 rgb(0, 62, 14), 0 2.5px rgb(0, 62, 14), 2.5px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+/* #login{
+    height: 100%;
+    width: 70%;
+    float: left;
+} */
+
+#content1{
+    height: 100%;
+    width: 30%;
+    float: left;
+    border: none;
+
+}
+
+#content2{
+    height: 100%;
+    width: 70%;
+    float: left;
+    border: none;
+
+}
+
+#content3{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+#content3{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+/* .display-inline-block{
+    display: inline-block;
+} */
+
+/* .display{
+    --border: 1px solid black;
+    width: 25%;
+    height: 100%;
+    color: green;
+    float: left;
+    text-align: center;
+    text-shadow: -2px 0 rgb(0, 62, 14), 0 2.5px rgb(0, 62, 14), 2.5px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    font-size: 50px;
+    margin-top: 10px;
+} */
+
+/* 세부_메뉴바 */
+#navi{
+    list-style-type: none;
+    --border: 1px solid blue;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    margin-top: 5px;
+}
+
+#navi>li{
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+#navi a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: -1px 0 rgb(0, 62, 14), 0 1px rgb(0, 62, 14), 2px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    color: honeydew;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    display: block; /*가로, 세로 사이즈 지정 위해 display 변경*/
+    /* vertical-align: middle;  */ /*vertical-align : inline 요소에만 가능*/
+    /* 해결책 == 줄 높이 자체를 변경해주면 됨! */
+    --line-height: 36px; 
+    /*폰트 사이즈가 18px 이므로 36px(무조건 두 배는 아님, 보기 좋게만 지정하면 됨)로 지정하면 가운데 정렬 가능*/
+    
+    /* a태그 사이즈 문제로 틈이 생겼기 때문에 transform:scale 키워서 메꿔줌 == 메뉴바 하위요소들 잘 나옴 */
+    transform: scale(1);
+    --margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.5px solid rgb(0, 62, 14);
+    padding: 5px;
+}
+
+#navi a:hover{
+    color: rgb(51, 255, 0);
+}
+
+/* 인기차트 */
+#in_title{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(0, 45, 5);
+    font-weight: 800;
+    text-shadow: 2px 2px 1px  rgb(227, 255, 215);
+    --text-shadow: -1px 0 rgb(0, 62, 14), 0 1px rgb(0, 62, 14), 2px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    display: flex;
+    justify-content: center;
+}
+
+#chart{
+    border: none;
+    font-size: 17px;
+    align-content: stretch;
+    justify-content: stretch;
+    align-items: stretch;
+    height: 90%;
+    border: 0.5px solid rgba(15, 65, 0, 0.3);
+    
+}
+
+#sucker{
+    height: 295px;
+    float: left;
+    margin: 1px;
+}
+
+tr:hover{
+    background-color: rgb(197, 255, 230);
+}

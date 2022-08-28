@@ -1,0 +1,350 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(255, 234, 247);
+
+}
+
+
+
+div, input{
+    --border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.wrap{
+    background-color:white;
+    height: 3230px;
+    width: 1000px;
+    box-sizing: border-box;
+    margin: auto;
+    
+}
+
+
+header{
+    height: 8%;
+}
+
+#contents{
+    height: 80%;
+    box-sizing: border-box;
+}
+
+#menu{
+    height: 20%;
+    width: 100%;
+    background-color: rgb(255, 234, 247);
+    
+}
+
+#main{
+    height: 82%;
+}
+
+footer{
+    height: 10%;
+}
+
+
+
+
+/* 슬라이드 */
+.slider{
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider input[type=radio]{
+    display: none;
+}
+
+ul.imgs{
+    padding: 0;
+    margin: 0;
+
+}
+ul.imgs li{
+    position: absolute;
+    left: 640px;
+    transition-delay: 1s;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 2;
+}
+.bullets label{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgb(255, 234, 247);
+    width: 20px;
+    height: 20px;
+    --cursor: pointer;
+}
+
+.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+    background-color: black;
+}
+.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+    background-color: black;
+}
+.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+    background-color: black;
+}
+.slider input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
+    background-color: black;
+}
+
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+.slider input[type=radio]:nth-child(4):checked~ul.imgs>li:nth-child(4){
+    left: 0;
+    transition: 0.5s;
+    z-index:1;
+}
+
+#plant{
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    --align-items: flex-start;
+    font-weight: 900;
+    --position: relative;
+    color: rgb(106, 106, 106);
+    background-color: rgb(255, 234, 247);
+    --text-shadow: -2px 0 rgb(253, 252, 253), 0 2.5px rgb(253, 252, 253), 2.5px 0 rgb(253, 252, 253), 0 -1px rgb(253, 252, 253);
+}
+
+/* 메뉴바 */
+#bar{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    --float: left;
+    --border: 1px solid  rgb(187, 187, 187);
+}
+
+#bar>li{
+    box-sizing: border-box;
+    --border: 1px solid blue;
+    float: left;
+    text-align: center;
+    height: 100%;
+    width: 25%;
+    background-color: white;
+}
+
+#bar a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: block;
+    transform: scale(1);
+    display: flex;
+    float: left;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Nanum Myeongjo', serif;
+    color: rgb(106, 106, 106);
+}
+
+/* 상단바 */
+
+#t-bar{
+    list-style-type: none;
+    margin-left: 70%;
+    height: 100%;
+    width: 100%;
+}
+
+#t-bar>li{
+    margin: auto;
+    display: flex;
+    float: left;
+}
+
+#t-bar a{
+    text-decoration: none;
+    display: flex;
+    float: left;
+    color: rgb(106, 106, 106);
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* 이미지 */
+#imgholder{
+    height: 400px;
+    width: 600px;
+}
+
+/* 제목 */
+.p-title{
+    font-size: 20px;
+    --font-weight: 500;
+    text-align: center;
+   --border-top: 1px dashed black;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    color: rgb(106, 106, 106);
+}
+
+
+
+#fw1{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    float: left;
+    align-content: center;
+    justify-content: space-evenly;
+
+}
+
+#fw2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    float: left;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.size{
+    height: 300px;
+    width: 300px;
+    margin-top:  10px;
+    margin-top:  10px;
+
+}
+
+#exa{
+    display: flex;
+    float: left;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 100%;
+}
+
+#ex1{
+    justify-items: center;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    font-family: 'Noto Serif KR', serif;
+
+}
+
+#ex2{
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    font-family: 'Noto Serif KR', serif;
+
+}
+
+#ex3{
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    font-family: 'Noto Serif KR', serif;
+    margin-bottom: 1px;
+    
+}
+
+.ex{
+    font-size: 16px;
+    font-family: 'Noto Serif KR', serif;
+}
+
+/* .line{
+    border-top: 1px dashed black;
+} */
+
+#footer{
+    width: 1000px;
+    height: 120px;
+}
+
+/* 위쪽 css는 안 가져감? */
+#footer>div{ width: 100%;}
+#footer_1{height: 20%;}
+#footer_2{height: 80%;}
+
+#footer_2>p{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#p1{height: 80%;}
+#p2{height: 20%;}
+
+#footer_1>a{
+
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    margin: 25px;
+    vertical-align: middle;
+}
+
+#footer_2{
+margin-top: 10px;
+    font-size: 10px;
+    color: darkgray;
+    margin-left: 20px;
+}
+
+#p1{
+    padding: 5px;
+}
+
+#p2{
+    /* 상하기준은 vertical align */
+    /* 좌우기준 가운데 정렬 */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
