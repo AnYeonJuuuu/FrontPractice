@@ -1,0 +1,242 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 250, 227);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* .wrap{
+    height: 1000px;
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+    box-sizing: ;
+} */
+
+div, input{
+    --border: 0.5px solid rgb(138, 138, 138);
+    box-sizing: border-box;
+
+}
+
+.wrap{
+    width: 1000px;
+    height: 1250px;
+    margin: auto;
+    box-sizing: border-box;
+    --border: 1px solid blue; /*나중에 지울 것!!*/
+    
+}
+
+
+header{
+    height: 15%;
+    width: 100%;
+}
+
+#contents{
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    border: none;
+
+}
+
+#menu{
+    height: 20%;
+    background-color: rgb(255, 250, 227);
+    border: 1px solid rgb(138, 138, 138);
+
+}
+
+
+main{
+    height: 85%;
+    width: 100%;
+}
+
+#footer{
+    height: 150px;
+    width: 1000px;
+    --border: 1px solid red;
+    box-sizing: border-box;
+}
+
+/* header */
+#cat{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: -2px 0 rgb(0, 62, 14), 0 2.5px rgb(0, 62, 14), 2.5px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    color: rgb(255, 250, 227);
+    background-color: white;
+    padding-top: 25px;
+}
+
+#a-cat{
+    animation-name: jjjin;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0,0.15,0,1,1);
+    animation-delay: 300ms;
+    animation-iteration-count: 1;
+    animation-direction: alternate-reverse;
+    transform: translate(110px,-45px);
+}
+
+@keyframes jjjin{
+    /* 시작, 종료지점은 꼭 들어가야 함. */
+    0%{
+        
+        transform: translate(110px,-50px);
+        --rotate: 20deg;
+        width: 100px;
+        height: 100px;
+    }
+    50%{
+        width: 100px;
+        height: 100px;
+        
+    }
+    100%{
+        
+        transform: translate(-350px,0px);
+        width: 100px;
+        height: 100px;
+        animation-play-state: paused;
+    }
+}
+
+/* 메뉴바 */
+#navi{
+    list-style-type: none;
+    height: 100%;
+    padding: 0xp;
+    margin: 0px;
+    text-shadow: -2px 0 rgb(0, 62, 14), 0 2.5px rgb(0, 62, 14), 2.5px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    --float: left;
+    border: none;
+    
+
+}
+
+#navi>li{
+    float: left;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    margin-left: 27%;
+    
+}
+
+#navi a{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: -1px 0 rgb(0, 62, 14), 0 1px rgb(0, 62, 14), 2px 0 rgb(0, 62, 14), 0 -1px rgb(0, 62, 14);
+    color: white;
+    --background-color: white;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    display: block; /*가로, 세로 사이즈 지정 위해 display 변경*/
+    /* vertical-align: middle;  */ /*vertical-align : inline 요소에만 가능*/
+    /* 해결책 == 줄 높이 자체를 변경해주면 됨! */
+    --line-height: 36px; 
+    /*폰트 사이즈가 18px 이므로 36px(무조건 두 배는 아님, 보기 좋게만 지정하면 됨)로 지정하면 가운데 정렬 가능*/
+    
+    /* a태그 사이즈 문제로 틈이 생겼기 때문에 transform:scale 키워서 메꿔줌 == 메뉴바 하위요소들 잘 나옴 */
+    transform: scale(1);
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    --align-content: center;
+    justify-content: space-evenly;
+}
+
+#photomenu{
+   
+    box-sizing: border-box;
+    --display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.photo1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+}
+
+#p1{
+    width: 500px;
+    height: 350px;
+    margin-right: 7px;
+}
+
+#p2{
+    width: 500px;
+    height: 350px;
+}
+
+
+.photo2{
+    width: 100%;
+    height: 33%;
+    --float: left;
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-evenly;
+}
+
+#p3{
+    width: 400px;
+    height: 350px;
+    margin-right: 5px;
+}
+
+#p4{
+    width: 400px;
+    height: 350px;
+    margin-right: 5px;
+
+}
+
+#p5{
+    width: 400px;
+    height: 350px;
+}
+
+.photo3{
+    width: 100%;
+    height: 33%;
+    --float: left;
+    display: flex;
+    margin-top: 3px;
+    box-sizing: border-box;
+}
+
+#p6{
+    width: 400px;
+    height: 350px;
+    margin-right: 5px;
+}
+
+#p7{
+    width: 600px;
+    height: 350px;
+}
+
+#mi{
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="./회원가입.css">
+    <link rel="stylesheet" href="./홈_plant.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <br><br>
+    <div class="wrap">
+    <div id="header">
+        <div>
+            <label id="title" for="">Join</label>
+        </div>   
+    <form id="join" action="insert.no" method="post">
+        <fieldset style="display: flex;">
+            <table id="size">
+                <tr>
+                    <th style="width: 500px; height: 40px;" >이름</th>
+                    <td><label for=""></label><input type="text" size="30" name="uploadFile" placeholder="이름."></td>
+                </tr>
+            <tr>
+            <th style="width: 500px; height: 40px;">아이디</th>
+            <td>
+            <input type="text" name="title" id="" size="30" placeholder="아이디를 입력해주세요." required>
+            <br>
+            </tr>
+            <tr>
+                <th style="width: 500px; height: 40px;" >비밀번호</th>
+                <td><input type="password" size="30" placeholder="비밀번호를 입력해주세요." required></input></td>
+            
+            </tr>
+            <tr>
+                <th style="width: 500px; height: 40px;" >비밀번호 확인</th>
+                <td><input type="password" size="30" placeholder="비밀번호 재입력" required></input></td>
+            
+            </tr>
+
+            <tr>
+                <th style="width: 500px; height: 40px;" >이메일</th>
+                <td><input type="email" name="userEmail" placeholder="이메일" required></input></td>
+            
+            </tr>
+
+            <tr>
+                <th style="width: 500px; height: 40px;" >전화번호</th>
+                <td><input type="tel" name="userPhone" placeholder="전화번호를 입력해주세요." required></input></td>
+            
+            </tr>
+
+            <tr>
+                <th style="width: 500px; height: 40px;" >생년월일</th>
+                <td><input type="date" name="dday" value="2022-08-29" id="dateInput"></input></td>
+            
+            </tr>
+
+            <tr>
+                <th style="width: 500px; height: 40px;" >선호 가격대</th>
+                <td><input type="range" name="price" max="100000" value="0원" step="200" id=""></input></td>
+            
+            </tr>
+        
+            <tr>
+                <td width="230px">  </td>
+                <td><input type="submit" name="" id="submit" value="회원가입" ></td>
+            </tr>
+           
+        
+        </table>   
+
+        </fieldset>
+    </form>
+</div> 
+</div>    
+</body>
+</html>
