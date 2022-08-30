@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요</title>
+    <script src="./01_개요.js"></script>
+    <style>
+        .area{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>JS 개요</h1>
+
+    <hr>
+
+    <h2>자바스크립트</h2>
+
+    <h3>1. 사용법</h3>
+
+    <h4>inline(인라인)</h4>
+    <!-- 태그 내에 직접 작성 : 코드 짧을 때 -->
+
+    <button onclick="console.log('버튼클릭 됨~~')">콘솔창에 출력하는 버튼</button>
+
+    <h4>internal(내부)</h4>
+    <!-- script 태그 영역에 작성 -->
+
+    <script>
+        console.log('내부 스크립트 코드 테스트')
+    </script>
+
+    <h4>external(외부)</h4>
+    <!-- 별도의 .js 파일로 작성하여 연결 : 가능하면 외부에 쓰는게 좋긴 함.-->
+
+    <hr>
+
+    <h3>2. 입출력</h3>
+
+    <script>
+        // alert('이건 알람ㅎㅎ')
+      
+        // // result 변수 앞에 타입 안 써도 동작 잘 됨!(자스 == 논타입 언어)
+        // result = window.confirm("차단하시겠습니까?");
+        // // alert("당신이 선택한 ㅂㅓ튼 :::" + result);
+        // if(result==true){
+        //     alert("차단ㅇㅇ");
+        // }else{
+        //     alert("차단ㄴㄴ");
+        // }
+   
+
+        // nick = prompt('당신의 이름은?');
+        // alert(nick + '님 환영합니다.');
+
+
+        // document.write('<h1>zzzzzzz</h1>')
+
+
+
+
+
+    </script>
+
+    <h3>3. 요소 가져오기</h3>
+
+    <div id="t1" class="area">타겟DIV</div>
+    <div id="t1" class="area">타겟DIV</div>
+    <div id="t1" class="area">타겟DIV</div>
+    <div id="t1" class="area">타겟DIV</div>
+    <div id="t1" class="area">타겟DIV</div>
+
+    <script>
+
+        // 예전 방식임 (이렇게 사용하는 것은 번거로움!)
+        a = document.getElementById('t1'); //id를 이용해서 요소 가져오기 :: id는 요소 한 개만 가져올
+        b = document.getElementsByClassName('area'); // class, tag (Elements) :: [배열로 나옴] 요소 여러 개 가져올 수 있
+        c = document.getElementsByTagName('div');
+       
+
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        x=document.querySelector('#t1'); // id 이용해서 요소 가져오기
+        y=document.querySelector('.area'); // 클래스 이용
+        z=document.querySelectorAll('div'); // 태그명 이용
+        console.log(x);
+        console.log(y);
+        console.log(z);
+
+
+
+    </script>
+
+    <h3>4. 요소 다루기</h3>
+
+    <button onclick="f01();">click</button>
+
+    <div id="cd" class="area">ㅇㅇㅇㅇㅇ</div>
+
+    <script>
+
+        
+
+        // function 함수명([파라미터..]){실행블록}
+        function f01(){
+            //x = document.getElementById('cd');
+            x = document.querySelector('#cd');
+            console.log(x);
+            
+            x.innerText = '바꿈ㅎㅎㅎㅎ'
+            x.style.backgroundColor = 'red';
+        }
+
+    
+    </script>
+
+    <hr>
+
+    <!-- 이 부분 중요~~~~ -->
+
+    <button onclick="f02();">클릭!</button>
+    <br>
+    <input type="text" name="userId" value="swy">
+
+    <script>
+        function f02(){
+
+            // 해당요소 == 콘솔에 나옴 
+            x = document.querySelector('input[name=userId]');
+            // console.log(x);
+
+            str = prompt("아이디를 입력하세요");
+
+            x.value = str;
+
+        }
+    </script>
+
+
+</body>
+</html>

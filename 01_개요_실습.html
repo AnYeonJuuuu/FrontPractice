@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요실습문제</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            box-sizing: border-box;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>개요 실습 문제</h1>
+
+    <hr>
+
+    <h2>문제1. 색상 조절하기</h2>
+    <p>
+        색상 선택 후, 변경 버튼 클릭하면 색상이 변경되도록 만들기
+    </p>
+
+    <div id="d1" class="box"></div>
+    <input type="color">
+    <button onclick="changeColor();">색상변경</button>
+
+    <script>
+        function changeColor(){
+            // d1 = document.getElementById('d1');
+            d1 = document.querySelector('#d1');
+            c = document.querySelector('input[type=color]');
+
+            // console.log(d1);
+            // console.log(c.value);
+
+            d1.style.backgroundColor = c.value;
+        }
+    </script>
+
+
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+    <h2>문제2. 크기 변경하기</h2>
+
+    <p>버튼에 따라 크기 조절 가능하도록 만들기</p>
+    <!-- 파라미터 값 여러개 지정?? -> 받는 것 주는 것 개수 안 맞아도 실행 잘 됨! -->
+    <button onclick="changeSize(50,50);">50</button>
+    <button onclick="changeSize(100,100);">100</button>
+    <button onclick="changeSize(200,200);">200</button>
+    <div id="d2" class="box"></div>
+
+    <script>
+
+        function changeSize(w, h){
+            // 첫 번ㅉ ㅐ요소 가져오고, 바꿔주기
+            d2 = document.querySelector('#d2');
+            console.log(d2);
+
+            //s = prompt("사이즈 몇으로 바꿀까요? ")
+
+            d2.style.width = w + 'px';
+            d2.style.height = h + 'px';
+        }
+
+    </script>
+
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+    <h2>문제3. HTML 태그 접근</h2>
+    <p>
+        텍스트 박스로 입력 받은 데이터를 가져와서 출력하기
+    </p>
+
+    <!-- 
+        0. 버튼을 클릭했을 때 동작할 함수 만들기(버튼 클릭 시 함수 동작하도록 설정하기)
+        1. 인풋태그 가져오기(잘 가져왔는지 콘솔 출력으로 확인)
+        2. 인풋태그의 value 가져오기(잘 가져왔는지 콘솔 출력으로 확인)
+        3. 결과 보여줄 div 태그 가져오기(잘 가져왔는지 콘솔 출력으로 확인)
+        4. div 태그의 안에 아무 글자 넣어보기(화면에서 눈으로 확인)
+        5. div 태그 내부에 2번에서 가져오 value 넣기(화면에서 눈으로 확인)
+     -->
+
+    구매자 : <input type="text" placeholder="구매자 이름"  id="in1">
+    <br><br>
+    상품명 : <input type="text" placeholder="상품명을 입력하세요"  id="in2">
+    <br><br>
+    수량 : <input type="text" placeholder="구매 수량을 입력하새요."  id="in3">
+    <br><br>
+
+    <!-- 함수 호출 시 : "f03();" <<< 괄호 꼭 붙여야 함!! >  -->
+    <button onclick="printOrder();">구매정보 출력</button>
+    <br>
+    <div id="result" class="box"></div>
+
+    <script>
+        function printOrder(){
+
+            x1 = document.querySelector('#in1');
+            x2 = document.querySelector('#in2');
+            x3 = document.querySelector('#in3');
+            console.log(x1.value);
+            console.log(x2.value);
+            console.log(x3.value);
+
+            resultDiv =  document.querySelector('#result');
+            console.log(resultDiv);
+
+            // resultDiv.innerHTML = '구매자 : ' + x1.value ;
+            // resultDiv.innerHTML += '<br>';
+            // // += :: 누적 연산자 이용하기 // = 으로 쓰면 없어져 버리므로
+            // resultDiv.innerHTML += '상품명 : ' + x2.value ;
+            // resultDiv.innerHTML += '<br>';
+            // resultDiv.innerHTML += '수량 : ' + x3.value ;
+
+            // 위 5줄과 똑같은 코드!
+            // resultDiv.innerHTML = '구매자 : ' + x1.value + '<br>' + '상품명 : ' + x2.value + '<br>' + '수량   : ' + x3.value;
+
+            // 다른 방식으로 쓸 수 있음 :: `(백틱은 변수 사용 가능?) <- 이용
+            resultDiv.innerHTML = `구매자 : ${x1.value}  <br> 상품 : ${x2.value}  <br> 가격 : ${x3.value} `;
+
+        }
+    </script>
+
+    <h2>문제4. 테이블 만들기</h2>
+    <p>
+        prompt로 사용자로부텈 행 열 값을 입력받고 table 만들기
+    </p>
+    <button onclick="generateTable();">테이블만들기</button>
+
+    <div id="table-area"></div>
+
+    <script>
+        function generateTable(){
+
+            ta = document.querySelector('#table-area');
+
+            
+            row = prompt('행 갯수');
+            col = prompt('열 갯수');
+            
+            str = '<table border="1">';
+            for(i = 0; i < row; ++i){
+                str += '<tr>';
+                for(j = 0; j < col; ++j){
+                    str += '<td>0</td>'
+                }
+                str += '</tr>';
+            }
+
+            str += '</table>';
+
+            ta.innerHTML = str;
+
+
+        }
+    </script>
+
+
+</body>
+</html>
