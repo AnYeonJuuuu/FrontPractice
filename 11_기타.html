@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-red{background-color: red;}
+        .color-blue{background-color: blue;}
+        .color-green{background-color: green;}
+    </style>
+</head>
+<body>
+
+    <div id="t" class="zzzzz xxdff dfdfd ">얖</div>
+    <button onclick="f01('color-red');">빨강</button>
+    <button onclick="f01('color-blue');">파랑</button>
+    <button onclick="f01('color-green');">초록</button>
+
+
+    <script>
+        function f01(x){ // 색상에 대해서만 작업!
+            const t = document.querySelector('#t');
+            //t.classList.add('red');
+            //t.classList.remove('red');
+            // t.classList.toggle('red'); // 클래스가 추가되고 삭제되고 할 수 있도록!
+            // 클릭할 때마다 기존의 내용 싹 날아감?
+            //t.className = '';
+
+            let len = t.classList.length;
+            for(let i = 0; i < t.classList.length; ++i){
+                console.log(t.classList[i]);// 만약, 이 친구가 color- 로 시작한다면 삭제!
+                if(t.classList[i].startsWith('color-')){
+                    t.classList.remove(t.classList[i]);
+                }
+            };
+
+            // 전달받은 값을 가지고 클래스 추가
+            t.classList.add(x);
+
+            // 비어있는 문자열, null, 0일 땐 "부정" | 0이 아닌 값은 "긍정"
+            // if(0){
+            //     alert("이프문 통과");
+            // }
+           
+        }
+    </script>
+
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+    <h2>새 창</h2>
+
+    아이디 : <input type="text" name = "userId">
+    <button onclick="f02();">중복확인</button>
+    <br>
+    <div id="result"></div>
+    
+    <script>
+
+        function f02(){
+            // 첫번째 파라미터는 오픈할 창
+            window.open("./11_기타_팝업창.html","child", "width=500, height = 500 ,top = 50, left=50");
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>
